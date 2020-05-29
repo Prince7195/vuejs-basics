@@ -10,12 +10,32 @@
     <div id="app">
       <h1 v-once>{{title}}</h1>
       <p>{{sayHello()}} - <a v-bind:href="link" target="_blank">Google</a></p>
-      <hr>
+      <hr />
       <p v-html="finishedLink"></p>
-      <hr>
+      <hr />
       <h5>Counter:</h5>
-      <button v-on:click="increase">Count</button>
-      <p>{{count}}</p>
+      <button v-on:click="increase(2, $event)">Count 2 time</button>
+      <button v-on:click="count++">Count 1 time</button>
+      <p>{{count}} {{count > 10 ? "Greater than 10" : "Smaller than 10"}}</p>
+      <hr />
+      <p v-on:mousemove="updateCoordinates">
+        Co-ordinates: {{ x }} / {{ y }} -
+        <span v-on:mousemove.stop="">DEAD SPOT</span>
+      </p>
+      <hr />
+      <input type="text" v-on:keyup.enter.space="alertMe" />
+      <hr />
+      <h5>Two way binding:</h5>
+      <input type="text" v-model="name" />
+      {{name}}
+      <hr />
+      <h5>Computed Property:</h5>
+      <button v-on:click="counter1++">Counter1 Increase</button>
+      <button v-on:click="counter1--">Counter1 Decrese</button>
+      <button v-on:click="counter2++">Counter2 Increase</button>
+      <p>Counters: {{counter1}} | {{counter2}}</p>
+      <p>{{result()}} | {{countOutput}}</p>
+      <hr />
     </div>
     <script src="/app.js"></script>
   </body>
