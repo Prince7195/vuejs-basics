@@ -65,6 +65,34 @@
         :style="[demo5Style, {height: width + 'px'}]"
       >Miltiple style object</div>
       <hr />
+      <h5>Consitional Statement --> If-Else:</h5>
+      <p v-if="show">You can see me!</p>
+      <p v-else>Now You can see me!</p>
+      <template v-if="show">
+        <h5>Heading:</h5>
+        <p>Inside the Template!</p>
+      </template>
+      <p v-show="show">Do You can see me?</p>
+      <button @click="show = !show">Show/Hide</button>
+      <hr />
+      <h5>Looping --> For-In:</h5>
+      <ul>
+        <li v-for="(ingredient, i) in ingredients">{{ingredient}} ({{i}})</li>
+      </ul>
+      <h6>In Template:</h6>
+      <template v-for="(ingredient, i) in ingredients">
+        <h6>{{ingredient}}:</h6>
+        <p><b>Index:</b>{{i}}</p>
+      </template>
+      <h5>Looping Objects --> For-In:</h5>
+      <ul>
+        <li v-for="person in persons">
+          <div v-for="(val, key, idx) in person">{{key}}: {{val}} ({{idx}})</div>
+        </li>
+      </ul>
+      <h5>Looping Numbers --> For-In:</h5>
+      <span v-for="num in 10">{{num}}</span>
+      <hr />
     </div>
     <script src="/app.js"></script>
   </body>

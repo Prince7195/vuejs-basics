@@ -14,7 +14,13 @@ new Vue({
     activeGreen: false,
     activeBlue: false,
     color: "blue",
-    width: 50
+    width: 50,
+    show: true,
+    ingredients: ["Meat", "Fruits", "Cookies"],
+    persons: [
+      { name: "John", age: 26, color: "green" },
+      { name: "Jane", age: "unknown", color: "red" }
+    ]
   },
   computed: {
     countOutput: function() {
