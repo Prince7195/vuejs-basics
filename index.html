@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue JS Basics</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="/vue.js"></script>
   </head>
   <body>
@@ -35,6 +36,34 @@
       <button v-on:click="counter2++">Counter2 Increase</button>
       <p>Counters: {{counter1}} | {{counter2}}</p>
       <p>{{result()}} | {{countOutput}}</p>
+      <hr />
+      <h5>Dynamic Styling with class:</h5>
+      <input type="text" v-model="color" />
+      <input type="text" v-model="width" />
+      <br />
+      <div
+        class="demo"
+        @click="activeRed = !activeRed"
+        :class="{red: activeRed}"
+      >class object</div>
+      <div
+        class="demo"
+        @click="activeGreen = !activeGreen"
+        :class="demo3Class"
+      >class variable</div>
+      <div class="demo" @click="activeBlue = !activeBlue" :class="color">class binded to input</div>
+      <div
+        class="demo"
+        :class="[{red: activeRed}, {green: activeGreen}, {blue: activeBlue}]"
+      >multiple class variables</div>
+      <div
+        class="demo"
+        :style="demo5Style"
+      >style object</div>
+      <div
+        class="demo"
+        :style="[demo5Style, {height: width + 'px'}]"
+      >Miltiple style object</div>
       <hr />
     </div>
     <script src="/app.js"></script>

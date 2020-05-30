@@ -9,12 +9,29 @@ new Vue({
     y: 0,
     name: "John",
     counter1: 0,
-    counter2: 0
+    counter2: 0,
+    activeRed: false,
+    activeGreen: false,
+    activeBlue: false,
+    color: "blue",
+    width: 50
   },
   computed: {
     countOutput: function() {
       console.log("computed");
       return this.counter1 > 5 ? "Greater than 5" : "Smaller than 5";
+    },
+    demo3Class: function() {
+      return {
+        "green-yellow": !this.activeGreen,
+        green: this.activeGreen
+      };
+    },
+    demo5Style: function() {
+      return {
+        backgroundColor: this.color,
+        width: this.width + "px"
+      };
     }
   },
   watch: {
