@@ -1,6 +1,6 @@
 {
-  "name": "component-communication",
-  "description": "A Vue.js project for component-communication",
+  "name": "forms-vue",
+  "description": "A Vue.js project for user form",
   "author": "Vijay deepak",
   "private": true,
   "scripts": {
