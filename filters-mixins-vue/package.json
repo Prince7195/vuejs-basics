@@ -1,7 +1,7 @@
 {
-  "name": "component-communication",
-  "description": "A Vue.js project for component-communication",
-  "author": "Vijay deepak",
+  "name": "filters-mixins-vue",
+  "description": "A Vue.js project for filters and mixins",
+  "author": "vijay Deepak",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
