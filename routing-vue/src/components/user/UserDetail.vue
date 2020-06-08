@@ -29,6 +29,14 @@
                     hash: "#data"
                 }
             };
+        },
+        beforeRouteEnter(to, from, next) {
+            console.log("component beforeRouteEnter");
+            if (true) {
+                next();
+            } else {
+                next(false);
+            }
         }
     }
 </script>

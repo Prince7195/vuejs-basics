@@ -3,7 +3,7 @@ import App from './App.vue'
 import VueResource from "vue-resource";
 
 Vue.use(VueResource);
-Vue.http.options.root = "https://vue-http-dd995.firebaseio.com"; // DB base url
+Vue.http.options.root = ""; // DB base url
 
 // to modify the resuest and response
 // should not be use in production because it affects entire app
