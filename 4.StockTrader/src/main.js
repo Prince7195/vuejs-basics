@@ -9,7 +9,7 @@ import { store } from "./store/store";
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
-Vue.http.options.root = "https://vue-http-dd995.firebaseio.com/";
+Vue.http.options.root = ""; // firebase URL
 // remove url
 
 Vue.filter('currency', (value) => {
