@@ -35,7 +35,7 @@ export default new Vuex.Store({
       }, expirationTime * 1000);
     },
     signUp({commit, dispatch}, authData) {
-      axios.post('/accounts:signUp?key=AIzaSyA_q140tyqfUOtp9l1f9M2VbDeZDiCDWVo', {
+      axios.post('/accounts:signUp?key=[API_KEY]', {
         email: authData.email,
         password: authData.password,
         returnSecureToken: true
@@ -57,7 +57,7 @@ export default new Vuex.Store({
         .catch(error => console.log(error))
     },
     login({commit, dispatch}, authData) {
-        axios.post('/accounts:signInWithPassword?key=AIzaSyA_q140tyqfUOtp9l1f9M2VbDeZDiCDWVo', {
+        axios.post('/accounts:signInWithPassword?key=[API_KEY]', {
           email: authData.email,
           password: authData.password,
           returnSecureToken: true
